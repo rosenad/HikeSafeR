@@ -12,23 +12,40 @@ public class Hike {
     String time;
     String distance; //km
     String difficulty;
-    private class Person{
+    public class Person{
         int child;
         int adult;
         int student;
         int pensioner;
+
+        public Person(int child, int adult, int student, int pensioner) {
+            this.child = child;
+            this.adult = adult;
+            this.student = student;
+            this.pensioner = pensioner;
+        }
     }
     Person cost;
-    private class Season{
+    public class Season{
         Times summer;
         Times winter;
 
-        private class Times{
-            String regular;
-            String fridays;
+        public Season(Times summer, Times winter) {
+            this.summer = summer;
+            this.winter = winter;
+        }
+
+    }
+    public class Times{
+        String regular;
+        String fridays;
+
+        public Times(String regular, String fridays) {
+            this.regular = regular;
+            this.fridays = fridays;
         }
     }
-    Season[] hours;
+    Season hours;
     Boolean overnight;
     int water;
     int bagWeight;
@@ -41,7 +58,7 @@ public class Hike {
     Boolean disabledFriendly;
     Boolean dogs;
 
-    public Hike(String name, String location, String altitude, String description, String region, String time, String distance, String difficulty, Person cost, Season[] hours, Boolean overnight, int water, int bagWeight, String[] keywords, String areaContact, String userReviews, String timeOfYear, String other, Boolean disabledFriendly, Boolean dogs) {
+    public Hike(String name, String location, String altitude, String description, String region, String time, String distance, String difficulty, int cost1,int cost2, int cost3,int cost4 , String season1, String season2, String season3 , String season4 , Boolean overnight, int water, int bagWeight, String[] keywords, String areaContact, String userReviews, String timeOfYear, String other, Boolean disabledFriendly, Boolean dogs) {
         this.name = name;
         this.location = location;
         this.altitude = altitude;
@@ -50,8 +67,8 @@ public class Hike {
         this.time = time;
         this.distance = distance;
         this.difficulty = difficulty;
-        this.cost = cost;
-        this.hours = hours;
+        this.cost = new Person(cost1, cost2, cost3, cost4);
+        this.hours = new Season(new Times(season1, season2), new Times(season3, season4));
         this.overnight = overnight;
         this.water = water;
         this.bagWeight = bagWeight;

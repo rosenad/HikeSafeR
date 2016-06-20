@@ -39,7 +39,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Region"
@@ -58,16 +58,7 @@
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Distance"
-        android:id="@+id/viewDistance"
-        android:layout_below="@+id/viewTime"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Difficulty"
         android:id="@+id/viewDifficulty"
@@ -77,9 +68,19 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/viewMap"
+        android:id="@+id/imageView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Distance"
+        android:id="@+id/viewDistance"
+        android:layout_below="@+id/viewTime"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center_horizontal|top" />
 
 </FrameLayout>
