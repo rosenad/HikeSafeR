@@ -1,5 +1,6 @@
 package hikingfolks.hikesafer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,10 +9,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
+import android.widget.ExpandableListView;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    ExpandableListView expandableListView;
+    HashMap<String, List<String>> regionHikeMap;
+    List regions;
+    HikeAdapter adapter;
+    static ParseJSON json;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +37,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Spinner region = (Spinner) findViewById(R.id.region);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.regions, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        region.setAdapter(adapter);
+//        Spinner region = (Spinner) findViewById(R.id.region);
+//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+//                R.array.regions, android.R.layout.simple_spinner_item);
+//        // Specify the layout to use when the list of choices appears
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        // Apply the adapter to the spinner
+//        region.setAdapter(adapter);
+
+        expandableListView = (ExpandableListView) findViewById(R.id.expandableListView);
+        regionHikeMap = RegionData.regionMap();
+        regions = RegionData.regionList();
+
+        adapter = new HikeAdapter(this, regionHikeMap, regions);
+        expandableListView.setAdapter(adapter);
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        });
+        expandableListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
+            @Override
+            public void onGroupExpand(int groupPosition) {
+
+            }
+        });
+
+        json = new ParseJSON();
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

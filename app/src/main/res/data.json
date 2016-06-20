@@ -1,0 +1,156 @@
+[
+  {
+    "hikeName": "Nahal Amud",
+    "location": "Road 8669 - Between kilometre 40 and 41",
+    "altitude": "170",
+    "description": "A mix of unique nature and man-made beauties. In the place you can find Nachal Eitan, pools between the rocks, rich fauna along the banks of the streams, and caves of ancient Man.",
+    "region": "galilee",
+    "time": "3 hours",
+    "distance": "10km",
+    "difficulty": "hard",
+    "cost": {
+      "adult": "29",
+      "child": "15",
+      "student": "25",
+      "pensioner": "15"
+    },
+    "hours": {
+      "summer": {"regular": "08:00-17:00", "fridays": "08:00-13:00"},
+      "winter": {"regular": "08:00-17:00", "fridays": "08:00-13:00"}
+    },
+    "overnight": "false",
+    "water": "2",
+    "bagWeight": "3",
+    "keywords": ["water", "swimming", "family", "north"],
+    "transportation": "",
+    "areaContact": "04-6999984",
+    "userReviews": [{
+      "userName": "snag87",
+      "rating": "4",
+      "review": "I had a great time taking my family here in September. Highly recommended!"
+    }, {
+      "userName": "rosenad",
+      "rating": "2",
+      "review": "Make sure you don't take kids younger than 5. We made that mistake."
+    }],
+    "timeOfYear": "all",
+    "other": "",
+    "disabledFriendly": "false",
+    "dogs": "true"
+  },
+  {
+    "hikeName": "Chirvat Mazin - Einot Tzukim",
+    "location": "Road 90 - 271 Kilometre mark",
+    "altitude": "",
+    "description": "One of the most amazing phenomenons of nature in the land of Israel. Now you can become familiar with its views on a path that starts opposite Churvat Mazin and finishes at Einot Tzukim.",
+    "region": "Yehuda and Shomron",
+    "time": "5 hours",
+    "distance": "6.5 km",
+    "difficulty": "hard",
+    "cost": {
+      "adult": "free",
+      "child": "free",
+      "student": "free",
+      "pensioner": "free"
+    },
+    "hours": {
+      "summer": {"regular": "always open", "fridays": "always open"},
+      "winter": {"regular": "always open", "fridays": "always open"}
+    },
+    "overnight": "false",
+    "water": "2",
+    "bagWeight": "3",
+    "keywords": ["summer", "disabled friendly", "swimming"],
+    "transportation": "",
+    "areaContact": "02-9942355",
+    "userReviews": [],
+    "timeOfYear": "all",
+    "other": "Start 6 hours before sunset.",
+    "disabledFriendly": "true",
+    "dogs": "false"
+  },
+  {
+    "hikeName": "Stalactite Cave",
+    "location": "Road 3866",
+    "altitude": "",
+    "description": "In this nature reserve there is a natural,expansive plowing area and one of the most beautiful stalactite caves in Israel.",
+    "region": "center",
+    "time": "45 minutes",
+    "distance": "10km",
+    "difficulty": "hard",
+    "cost": {
+      "adult": "29",
+      "child": "15",
+      "student": "25",
+      "pensioner": "15"
+    },
+    "hours": {
+      "summer": {"regular": "08:00-17:00", "fridays": "08:00-16:00"},
+      "winter": {"regular": "08:00-16:00", "fridays": "08:00-15:00"}
+    },
+    "overnight": "false",
+    "water": "2",
+    "bagWeight": "3",
+    "keywords": ["cave", "family", "center"],
+    "transportation": "",
+    "areaContact": "02-9911117",
+    "userReviews": [],
+    "timeOfYear": "all",
+    "other": "",
+    "disabledFriendly": "false",
+    "dogs": "false"
+  },
+  {
+    "hikeName": "Nachal Zoytan",
+    "location": "Road 9088 - Near Katzrin",
+    "altitude": "",
+    "description": "Deep canyons cut through the center of Ramat Hagolan and along these canyons waterfalls stream down to the deep pools.",
+    "region": "North",
+    "time": "5 hours",
+    "distance": "6 km",
+    "difficulty": "medium-hard",
+    "cost": {
+      "adult": "29",
+      "child": "15",
+      "student": "25",
+      "pensioner": "15"
+    },
+    "hours": {
+      "summer": {"regular": "08:00-17:00", "fridays": "08:00-16:00"},
+      "winter": {"regular": "08:00-16:00", "fridays": "08:00-15:00"}
+    },
+    "overnight": "false",
+    "water": "2",
+    "bagWeight": "3",
+    "keywords": ["spring", "north", "short"],
+    "transportation": "",
+    "areaContact": "02-9942355",
+    "userReviews": [],
+    "timeOfYear": "all",
+    "other": "Start 6 hours before sunset.",
+    "disabledFriendly": "true",
+    "dogs": "true"
+  },
+  {
+    "hikeName": "Maaleh Eli - Small Crater",
+    "location": "",
+    "altitude": "",
+    "description": "Adventures down south. Come and take a glance at the unique geological phenomenons in this nature reserve.",
+    "region": "South",
+    "time": "5 hours",
+    "distance": "6 km",
+    "difficulty": "medium-hard",
+    "cost": "",
+    "hours": "",
+    "overnight": "false",
+    "water": "2",
+    "bagWeight": "3",
+    "keywords": ["all year round", "south"],
+    "transportation": "",
+    "areaContact": "08-6588821",
+    "userReviews": [],
+    "timeOfYear": "all",
+    "other": "",
+    "disabledFriendly": "false",
+    "dogs": ""
+  }]
