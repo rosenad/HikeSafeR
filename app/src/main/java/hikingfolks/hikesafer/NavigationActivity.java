@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +25,8 @@ public class NavigationActivity extends AppCompatActivity
         setContentView(R.layout.activity_navigation);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Bundle b= getIntent().getExtras();
+        String name = b.getString("name");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,9 @@ public class NavigationActivity extends AppCompatActivity
 
         FragmentManager fm = getFragmentManager();
         fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).commit();
+
+        TextView hikeName = (TextView) findViewById(R.id.nameOfHike);
+        hikeName.setText(name);
 
     }
 

@@ -3,75 +3,19 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name"
         android:id="@+id/viewName"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="214dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Location"
-        android:id="@+id/viewLocation"
-        android:layout_below="@+id/viewName"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Altitude"
-        android:id="@+id/viewAltitude"
-        android:layout_below="@+id/viewLocation"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Description"
-        android:id="@+id/viewDescription"
-        android:layout_below="@+id/viewAltitude"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="99dp"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Region"
-        android:id="@+id/viewRegion"
-        android:layout_below="@+id/viewDescription"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Time"
-        android:id="@+id/viewTime"
-        android:layout_below="@+id/viewRegion"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Difficulty"
-        android:id="@+id/viewDifficulty"
-        android:layout_below="@+id/viewDistance"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="215dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,8 +23,54 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Distance"
         android:id="@+id/viewDistance"
-        android:layout_below="@+id/viewTime"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center_horizontal|top" />
+        android:layout_marginTop="240dp"/>
+
+    <TextView
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Region"
+        android:id="@+id/viewRegion"
+        android:layout_marginTop="265dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Difficulty"
+        android:id="@+id/viewDifficulty"
+        android:layout_marginTop="290dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Description"
+        android:id="@+id/viewDescription"
+        android:layout_marginTop="700dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Altitude"
+        android:id="@+id/viewAltitude"
+        android:layout_marginTop="340dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time"
+        android:id="@+id/viewTime"
+        android:layout_marginTop="365dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Location"
+        android:id="@+id/viewLocation"
+        android:layout_marginTop="390dp" />
 
 </FrameLayout>
