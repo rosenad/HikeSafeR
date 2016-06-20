@@ -9,7 +9,9 @@
         android:layout_height="wrap_content"
         android:text="New Text"
         android:id="@+id/item_text"
-        android:background="#F00"
+        android:textColor="#071209"
+        android:background="#ffffff"
+
         />
 
 </LinearLayout>

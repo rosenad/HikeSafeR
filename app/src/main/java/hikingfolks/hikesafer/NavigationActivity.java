@@ -1,23 +1,28 @@
 package hikingfolks.hikesafer;
 
+import android.support.v4.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 
 public class NavigationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    static String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +31,9 @@ public class NavigationActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Bundle b= getIntent().getExtras();
-        String name = b.getString("name");
+        name = b.getString("name");
+        Log.d("NAMkajsdk", name);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,10 +54,13 @@ public class NavigationActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager fm = getFragmentManager();
-        fm.beginTransaction().replace(R.id.content_frame, new ContactFragment()).commit();
+        fm.beginTransaction().replace(R.id.content_frame, new RouteFragment()).commit();
 
-        TextView hikeName = (TextView) findViewById(R.id.nameOfHike);
-        hikeName.setText(name);
+
+//        TextView hikeName = (TextView) findViewById(R.id.nameOfHike);
+//        hikeName.setText(name);
+
+
 
     }
 
@@ -95,7 +105,7 @@ public class NavigationActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.water) {
-            // Handle the camera action
+            fm.beginTransaction().replace(R.id.content_frame, new WaterFragment()).commit();
         } else if (id == R.id.route) {
             fm.beginTransaction().replace(R.id.content_frame, new RouteFragment()).commit();
         } else if (id == R.id.contacts) {
@@ -108,6 +118,31 @@ public class NavigationActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+
+    public void find_water(View v){
+        EditText editText = (EditText) findViewById(R.id.editText);
+        String message = editText.getText().toString();
+        // Create fragment and give it an argument for the selected article
+        Fragment newFragment = new WaterFragment2();
+        Bundle args = new Bundle();
+        args.putInt("volume", Integer.parseInt(message));
+        newFragment.setArguments(args);
+
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        // Replace whatever is in the fragment_container view with this fragment,
+        // and add the transaction to the back stack so the user can navigate back
+        transaction.replace(R.id.content_frame, newFragment);
+        transaction.addToBackStack(null);
+
+        // Commit the transaction
+        transaction.commit();
     }
 
 }

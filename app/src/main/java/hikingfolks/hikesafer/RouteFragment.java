@@ -3,6 +3,7 @@ package hikingfolks.hikesafer;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,14 +97,87 @@ public class RouteFragment extends Fragment {
                 false
         ));
 
-        viewName.setText(hikeMap.get("Nahal Amud").name);
-        viewLocation.setText(hikeMap.get("Nahal Amud").location);
-        viewAltitude.setText(hikeMap.get("Nahal Amud").altitude);
-        viewDescription.setText(hikeMap.get("Nahal Amud").description);
-        viewRegion.setText(hikeMap.get("Nahal Amud").region);
-        viewTime.setText(hikeMap.get("Nahal Amud").time);
-        viewDistance.setText(hikeMap.get("Nahal Amud").distance);
-        viewDifficulty.setText(hikeMap.get("Nahal Amud").difficulty);
+
+        hikeMap.put("Nachal Zoytan", new Hike(
+                "Road 9088 - Near Katzrin",
+                "",
+                "",
+                "Deep canyons cut through the center of Ramat Hagolan and along these canyons waterfalls stream down to the deep pools.",
+                "North",
+                "5 hours",
+                "6 km",
+                "medium-hard",
+                29,15,25,15,
+                "08:00-17:00","08:00-16:00","08:00-16:00", "08:00-15:00",
+                false,
+                2,
+                3,
+                new String[]{"spring", "north", "short"},
+                "02-9942355",
+                "",
+                "all",
+                "Start 6 hours before sunset.",
+                true,
+                true
+        ));
+
+        hikeMap.put("Stalactite Cave", new Hike(
+                "Road 3866",
+                "",
+                "",
+                "In this nature reserve there is a natural,expansive plowing area and one of the most beautiful stalactite caves in Israel.",
+                "center",
+                "45 minutes",
+                "10km",
+                "hard",
+                29,15,25,15,
+                "08:00-17:00","08:00-16:00","08:00-16:00", "08:00-15:00",
+                false,
+                2,
+                3,
+                new String[]{"cave", "family", "center"},
+                "02-9911117",
+                "",
+                "all",
+                "",
+                false,
+                false
+        ));
+
+        hikeMap.put("Chirvat Mazin - Einot Tzukim", new Hike(
+                "Road 90 - 271 Kilometre mark",
+                "",
+                "",
+                "One of the most amazing phenomenons of nature in the land of Israel. Now you can become familiar with its views on a path that starts opposite Churvat Mazin and finishes at Einot Tzukim.",
+                "Yehuda and Shomron",
+                "5 hours",
+                "6.5 km",
+                "hard",
+                0,0,0,0,
+                "always open", "always open", "always open", "always open",
+                false,
+                2,
+                3,
+                new String []{"summer", "disabled friendly", "swimming"},
+                "02-9942355",
+                "",
+                "all",
+                "Start 6 hours before sunset.",
+                true,
+                false
+
+        ));
+        String hikeName = NavigationActivity.name;
+        Log.d("jakhsjkdahsjkdh", hikeName);
+
+        viewName.setText(hikeName);
+        viewLocation.setText(hikeMap.get(hikeName).location);
+        viewAltitude.setText(hikeMap.get(hikeName).altitude);
+        viewDescription.setText(hikeMap.get(hikeName).description);
+        viewRegion.setText(hikeMap.get(hikeName).region);
+        viewTime.setText(hikeMap.get(hikeName).time);
+        viewDistance.setText(hikeMap.get(hikeName).distance);
+        viewDifficulty.setText(hikeMap.get(hikeName).difficulty);
 
 //        viewMap = (ImageView) rootView.findViewById(R.id.viewMap);
 //        viewMap.setImageURI((new URL("https://www.google.co.il/maps/dir/32.9100622,35.4864562/32.8764549,35.5030149/@32.8936893,35.4849258,14.07z/data=!4m2!4m1!3e2)").toURI()));

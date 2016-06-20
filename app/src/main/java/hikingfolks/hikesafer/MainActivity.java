@@ -58,10 +58,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 nameOfHike = adapter.getChild(groupPosition, childPosition).toString();
                 Log.d("name of hike", nameOfHike);
-                Bundle b = new Bundle();
-                b.putString("name", nameOfHike);
                 Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
-                intent.putExtra("name",b);
+                intent.putExtra("name", nameOfHike);
                 startActivity(intent);
                 return true;
             }
